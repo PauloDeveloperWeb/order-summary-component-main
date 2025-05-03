@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.backbody{
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: -5rem;
+  width: 100%;
+  height: 120%;
+  z-index: -1; /* Isso coloca o background atrás de todos os elementos */ 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: hsl(225, 100%, 94%);
+  
+  
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  width: 100%;
+  border-radius: 10px 10px 0 0; /* Arredonda apenas o topo */   
+}
+
+.img-mobile{
+  display: none;
+}
+
+.card{
+  flex-direction: column;
+  display: flex;
+  background-color: hsl(225, 100%, 98%);  
+  justify-content: flex-start;
+  align-items: center; 
+  width: 32vw;
+  max-width: 470px;
+  height:80vh;    
+  font-family: 'Red Hat Display', sans-serif;
+  border-radius: 10px;
+
+}
+
+.price{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: auto;   
+  width: 80%;
+  height: 12%;   
+  place-items: center; 
+  border-radius: 10px;
+  background-color: hsl(225, 100%, 96%) ;  
+}
+
+.plan{
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  }
+
+  @media (max-width: 900px) {
+
+    body > div.backbody > img.img-desktop{
+      display: none;
+    }
+    body > div.backbody > img.img-mobile{
+      display: flex;
+      width: 100%;
+      height: 50%;
+}
+  .card{
+    width: 90%;
+    height: 65%;    
+  }
+  body > div.container > div > h1{
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+  
+  body > div.container > div > p{
+    margin-bottom: 1rem;
+  }
+
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="backbody">
+      <img class="img-desktop" src="./images/pattern-background-desktop.svg" alt=""> 
+      <img class="img-mobile" src="./images/pattern-background-mobile.svg" alt="">
+
+  </div>
+
+<div class="container">
+<div class="card">
+<img style="display: flex; align-items: center; justify-content: center;" src="./images/illustration-hero.svg" alt="">
+<h1 style="text-align: center;color: hsl(223, 47%, 23%); margin-top: 3rem; margin-bottom: 0;">Order Summary</h1> 
+<p style="width: 80%; color:hsl(224, 23%, 55%); font-weight: 500; ">You can now listen to millions of songs, audiobooks, and podcasts on any 
+  device anywhere you like!</p>   
+ <div class="price">
+  <div>
+    <img style="width: 3rem;" src="./images/icon-music.svg" alt="">
+  </div>
+  <div class="plan">
+  <h4 style="margin-top: 0; margin-bottom: 0.5rem;color:hsl(223, 47%, 23%) ; margin-right: 2rem;">Annual Plan</h4>
+   <p style="margin-top: 0; margin-bottom: 0; margin-right: 2rem; color: hsl(224, 23%, 55%);">$59.99/year</p>
+  </div>
+  
+  <a style="color: hsl(245, 75%, 52%); font-weight: bold;" href="">Change</a>
+ </div>
+  
+ <button style="background-color: hsl(245, 75%, 52%); width: 80%; color: white; height: 8%; border-radius:0.7rem ; margin-top: 1.5rem;font-weight: 800;outline: none; border: none;"> Proceed to Payment</button>
+ 
+  <h4 style="color: hsl(224, 23%, 55%);">Cancel Order</h2>
+
+
+</div>
+
+</div>
+
+
+
+  
+</body>
+</html>
